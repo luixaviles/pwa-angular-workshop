@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MovieService, Movie } from '../movie.service';
 
 @Component({
   selector: 'pwa-movie-list',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieListComponent implements OnInit {
 
-  constructor() { }
+  public movies: Movie[];
+  constructor(private service: MovieService) { }
 
   ngOnInit() {
+    this.service.getMovies()
+    .subscribe(res => this.movies = res.results);
   }
 
 }
