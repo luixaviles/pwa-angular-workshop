@@ -1,3 +1,6 @@
-<p>
-  movie-list works!
-</p>
+<mat-list>
+  <mat-list-item *ngFor="let movie of movies">
+    <p mat-line>{{movie.title}}</p>
+    <p mat-line>{{movie.overview}}</p>
+  </mat-list-item>
+</mat-list>

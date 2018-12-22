@@ -9,6 +9,14 @@ import { MovieService, Movie } from '../movie.service';
 export class MovieListComponent implements OnInit {
 
   public movies: Movie[];
+  // public movies: Movie[] = [
+  //   {
+  //     id: 1,
+  //     title: 'Acuaman',
+  //     overview: 'Acuaman Movie',
+  //     poster_path: ''
+  //   }
+  // ]
   constructor(private service: MovieService) { }
 
   ngOnInit() {
